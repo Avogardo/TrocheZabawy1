@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 class Kwadraty extends Component {
 
-    kwadraty(props) {
-      var tablicakwadratow = this.props.in.map(this.potega);
+    kwadraty(arr) {
+      var tablicakwadratow = arr.map(this.potega);
       return tablicakwadratow.join(",");
     }
 
@@ -11,9 +11,9 @@ class Kwadraty extends Component {
       return Math.pow(x, 2);
     }
 
-    render () {
+    render (props) {
       return(      
-        <p>{this.kwadraty()}</p>
+        <p>{this.kwadraty(this.props.in)}</p>
       )
     }
 };

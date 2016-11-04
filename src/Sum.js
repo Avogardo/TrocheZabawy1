@@ -35,7 +35,7 @@ class  Sum extends Component {
    }
 
     add(a, b) {
-      if(a != NaN) {
+      if(a !== NaN) {
         return a + b;
     } else {
        return 0;
