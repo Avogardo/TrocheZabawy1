@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 
 class  Lacz extends Component {
 
-    lacz(props) {
-      return this.props.invite.join(this.props.separator);      
+    lacz(str, sep) {
+        return str.join(sep);
     }
 
-    render () {
-      return(
-        <p>{this.lacz()}</p>
-      )
+    render (props) {
+        return(
+            <p>{this.lacz(this.props.invite, this.props.separator)}</p>
+        )
     }
 };
 
