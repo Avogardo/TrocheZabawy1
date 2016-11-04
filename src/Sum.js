@@ -33,11 +33,7 @@ class  Sum extends Component {
   }
 
   add(a, b) {
-    if(a !== NaN) {
       return a + b;
-    } else {
-      return 0;
-    }
   }
 
   render (props) {
