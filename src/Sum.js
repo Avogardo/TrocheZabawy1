@@ -6,15 +6,24 @@ class  Sum extends Component {
       if(this.props.in == null) {
           return <p>0</p>;
       } else if(this.props.in.every(this.checkNumberous)) {
-          var sum = this.props.in.reduce(this.add, 0);    
-          return sum;
-      } 
-      else {
+          return this.props.in.reduce(this.add, 0);    
+      } else {
           var arr;
           arr = this.props.in.map(Number);
-          var sum1 = arr.reduce(this.add, 0); 
-          return sum1;
+          if(arr.every(isNaN)) {
+            return <p>0</p>;
+          } else {
+            var t = this.filterNaN(arr);
+
+          return  t.reduce(this.add, 0); 
+           
+        }
       }
+    }
+
+    filterNaN(arr) {
+      var filteredArr = arr.filter(Boolean);
+      return filteredArr;
     }
 
     numberise(x) {
@@ -26,12 +35,16 @@ class  Sum extends Component {
    }
 
     add(a, b) {
-      return a + b;
+      if(a != NaN) {
+        return a + b;
+    } else {
+       return 0;
+    }
     }
 
     render () {
       return(      
-        <p>{this.sum(this.props.in)}</p>
+        <p>{this.sum()}</p>
       )
     }
 };

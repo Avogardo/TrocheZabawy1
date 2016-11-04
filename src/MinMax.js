@@ -9,7 +9,7 @@ class  MinMax extends Component {
 
     render () {
       return(      
-        <p>{this.minMax(this.props.someNumbers)}</p>
+        <p>{this.minMax()}</p>
       )
     }
 };
