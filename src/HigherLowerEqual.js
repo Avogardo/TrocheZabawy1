@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 
 class  HigherLowerEqual extends Component {
 
-
   higherLowerEqual(arrey, y) {
-    var arr = arrey.map(function(z, i) {
+    const arr = arrey.map(function(z, i) {
     if(z > y) {
       return <p key={i}>Liczba {z} jest wieksza {y}</p>;
     } else if(z < y) {
@@ -15,7 +14,7 @@ class  HigherLowerEqual extends Component {
       return arr;
   }
 
-  render (props) {
+  render () {
     return(
       <div>{this.higherLowerEqual(this.props.someNumbers, this.props.x)}</div>
     )

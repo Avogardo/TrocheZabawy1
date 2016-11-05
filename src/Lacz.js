@@ -6,7 +6,7 @@ class  Lacz extends Component {
         return str.join(sep);
     }
 
-    render (props) {
+    render () {
         return(
             <p>{this.lacz(this.props.invite, this.props.separator)}</p>
         )

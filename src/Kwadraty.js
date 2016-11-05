@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Kwadraty extends Component {
 
   kwadraty(arr) {
-    var tablicakwadratow = arr.map(this.potega);
+    const tablicakwadratow = arr.map(this.potega);
     return tablicakwadratow.join(",");
   }
 
@@ -11,7 +11,7 @@ class Kwadraty extends Component {
     return Math.pow(x, 2);
   }
 
-  render (props) {
+  render () {
     return(
       <p>{this.kwadraty(this.props.in)}</p>
     )
