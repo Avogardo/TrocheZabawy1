@@ -14,9 +14,17 @@ class  HigherLowerEqual extends Component {
       return arr;
   }
 
+    isUndefinied(x, y) {
+        if (typeof y === 'undefined') {
+            return <p>Nie ma podanej wartosci</p>;
+        } else {
+            return this.higherLowerEqual(x, y);
+        }
+    }
+
   render () {
     return(
-      <div>{this.higherLowerEqual(this.props.someNumbers, this.props.x)}</div>
+      <div>{this.isUndefinied(this.props.someNumbers, this.props.x)}</div>
     )
   }
 };

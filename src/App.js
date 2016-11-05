@@ -13,7 +13,7 @@ render() {
 		<Lacz  invite={['zapros', 'jakas', 'dziewczyne', 'na', 'kawe', 'do', 'siebie', 'i', 'wygrzejcie', 'sie', 'razem']} separator="*"/>
 		<MinMax someNumbers={[1,-4,5,6]}/>
 		<Kwadraty in={[1, 2, 7, 3]}/>
-		<Sum />
+		<Sum in={['1', '2', '7', 3]}/>
 		<HigherLowerEqual someNumbers={[-2, 4, 9, 4.23, 6]} x={4.23}/>
 	</div>
     );
