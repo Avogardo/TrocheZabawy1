@@ -3,18 +3,14 @@ import React, { Component } from 'react';
 class  Sum extends Component {
 
   sum(inHere) {
-    if(inHere == null) {
+    const arr = inHere.map(Number);
+    const t = this.filterNaN(arr);
+
+    if(inHere === null || arr.every(isNaN)) {
       return <p>0</p>;
     } else {
-        const arr = inHere.map(Number);
-
-        if(arr.every(isNaN)) {
-          return <p>0</p>;
-        } else {
-          const t = this.filterNaN(arr);
-          return  t.reduce(this.add, 0);
-        }
-    }
+        return  t.reduce(this.add, 0);
+      }
   }
 
   filterNaN(arr) {
